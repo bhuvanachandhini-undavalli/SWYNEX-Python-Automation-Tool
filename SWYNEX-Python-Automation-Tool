@@ -1,0 +1,27 @@
+# SWYNEX Python Automation Tool
+# Student Report Automation
+
+students = [
+    {"name": "Bhuvana", "marks": [85, 90, 78]},
+    {"name": "Ravi", "marks": [70, 75, 75]},
+    {"name": "Anu", "marks": [45, 50, 45]},
+    {"name": "Kiran", "marks": [92, 90, 93]}
+]
+
+print("===== STUDENT REPORT =====")
+
+for student in students:
+    total = sum(student["marks"])
+    average = total / len(student["marks"])
+
+    if average >= 40:
+        result = "PASS"
+    else:
+        result = "FAIL"
+
+    print("\nName:", student["name"])
+    print("Total:", total)
+    print("Average:", round(average, 2))
+    print("Result:", result)
+
+print("\nReport generated automatically!")
